@@ -24,20 +24,36 @@ const GlobalStyle = createGlobalStyle`
 
     html{
         font-size:var(-font-size);
-        font-family:var(--lexend-dec-font);
+        
     }
     
     body{
         background-color:var(--very-dark-blue);
-        color:var(--white);
+        font-family:var(--inter-font);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:6rem 0;
+
+        @media screen and (min-width:769px){
+            height:100vh;
+            padding: 0;
+        
+        }
     }
 
+  
 `;
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
+
+  @media screen and (max-width: 769px) {
+    max-width: 90%;
+  }
 `;
 
 export default GlobalStyle;

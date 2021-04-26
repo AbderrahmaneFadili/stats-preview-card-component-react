@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import GlobalStyle from "./theme/GlobalStyle";
+import GlobalStyle, { Container } from "./theme/GlobalStyle";
 import theme from "./theme/theme";
 import { ThemeProvider } from "styled-components";
+import Stats from "./components/Stats";
 
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <h1>Preview Card</h1>
+        <Container>
+          <Stats />
+        </Container>
       </ThemeProvider>
     );
   }
